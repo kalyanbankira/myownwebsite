@@ -1,0 +1,196 @@
+/* ==============================
+   General Page
+============================== */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('design2.jpg');
+  background-size: cover;
+  background-position: center;
+
+}
+
+/* ==============================
+   Header / Title
+============================== */
+.heading1 {
+  margin: 0;
+  padding: 0.5rem 0;
+  text-align: center;
+  font-size: 1.5rem;
+  background-image: url('design5.jpg');
+  background-size: cover;
+  background-position: center;
+
+}
+
+h1 {
+  text-align: center;
+  color: #FCF8DD;
+  font-size: 2.5rem;
+  margin: 20px 0;
+}
+
+/* ==============================
+   Roadmap Container
+============================== */
+.roadmap {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+}
+
+/* ==============================
+   Level Card
+============================== */
+.level {
+  background: #CFFFE2;
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-left: 6px solid #064232;
+  transition: transform 0.2s ease, box-shadow 0.s ease, border-left-color 0.2s ease;
+}
+
+.level:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  border-left-color: #0f44ad;
+}
+
+/* ==============================
+   Level Title
+============================== */
+.level strong {
+  display: block;
+  font-size: 1.2em;
+  color: #4a90e2;
+  margin-bottom: 10px;
+}
+
+/* ==============================
+   Details / Accordion
+============================== */
+.details {
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #555;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding-left: 5px;
+}
+
+.level.active .details {
+  max-height: 500px;
+  padding-top: 8px;
+}
+
+/* ==============================
+   Responsive
+ ============================== */
+@media (max-width: 768px) {
+  .roadmap {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    margin: 15px 0;
+  }
+
+  .level {
+    padding: 15px;
+  }
+
+  .level strong {
+    font-size: 1.1em;
+  }
+
+  .details {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .roadmap {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .level {
+    padding: 12px;
+    border-left-width: 4px;
+  }
+}
+
+/* ===== Footer Section ===== */
+footer {
+  background-color: #041730;
+  padding: 1rem 1rem;
+  text-align: center;
+  color: #fff;
+  margin-top: auto;
+}
+
+footer .social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+footer .social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+footer .social-links a img {
+  width: 20px;
+  height: 20px;
+  filter: invert(100%);
+}
+
+footer .facebook {
+  background-color: #1877f2;
+}
+
+footer .instagram {
+  background-color: #e4405f;
+}
+
+footer .twitter {
+  background-color: #1da1f2;
+}
+
+footer .linkedin {
+  background-color: #0077b5;
+}
+
+footer .youtube {
+  background-color: #ff0000;
+}
+
+footer .social-links a:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+footer p {
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
